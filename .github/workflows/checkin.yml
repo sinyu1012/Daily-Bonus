@@ -13,7 +13,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         # os: [ubuntu-latest, self-hosted]
-        # test
 
     runs-on: ${{ matrix.os }}
 
@@ -52,4 +51,5 @@ jobs:
 
       - name: Check-in
         run: python ./message.py
+
 
