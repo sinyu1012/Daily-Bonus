@@ -13,10 +13,12 @@ from V2EX import v2ex_checkin
 from Yamibo import yamibo_checkin
 from Yurifans import yurifans_checkin
 from telegram import Bot
+import requests
 
 # info
 TG_USER_ID = os.environ.get("TG_USER_ID")
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
+SERVERPUSHKEY = os.environ.get("SERVERPUSHKEY")
 
 if __name__ == '__main__':
     start_time = time.time()
@@ -47,5 +49,20 @@ if __name__ == '__main__':
             text=content,
             parse_mode="HTML"
         )
+
+    if SERVERPUSHKEY:
+        server_url = f"https://sctapi.ftqq.com/{SERVERPUSHKEY}.send"
+        data = {
+            "title": "Daily Bonus 签到通知",
+            "desp": content
+        }
+        try:
+            response = requests.post(server_url, data=data)
+            if response.status_code == 200:
+                print("Server酱推送成功")
+            else:
+                print(f"Server酱推送失败: {response.status_code}")
+        except Exception as e:
+            print(f"Server酱推送异常: {str(e)}")
 
     print(content)

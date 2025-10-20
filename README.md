@@ -6,7 +6,7 @@
     <a href="https://github.com/jckling/Daily-Bonus/issues"><img src="https://img.shields.io/github/issues/jckling/Daily-Bonus" alt="GitHub issues"></a>
 </p>
 
-使用 Github Action 签到，用哪个就配置相应的环境变量，默认输出到控制台，支持 Telegram 消息推送。
+使用 Github Action 签到，用哪个就配置相应的环境变量，默认输出到控制台，支持 Telegram 和 Server酱 消息推送。
 
 ## 说明
 
@@ -18,6 +18,7 @@
 - [x] yamibo 论坛（对象）
 - [x] yurifans 论坛（积分）
 - [x] telegram-bot 推送
+- [x] Server酱 推送
 - [ ] ff14 （积分）【修复中】
 - [ ] 哔咔漫画打卡（哔咔）【未验证】
 
@@ -58,6 +59,12 @@ Telegram 推送签到结果
 |--------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | TG_BOT_TOKEN | bot token   | [How Do I Create a Bot?](https://core.telegram.org/bots#how-do-i-create-a-bot)                                                                                                                              |
 | TG_USER_ID   | user id     | [How can I send a message to someone with my telegram bot using their Username](https://stackoverflow.com/questions/41664810/how-can-i-send-a-message-to-someone-with-my-telegram-bot-using-their-username) |
+
+### Server酱 推送
+
+| Name          | Description | How to                                                |
+|---------------|-------------|-------------------------------------------------------|
+| SERVERPUSHKEY | SendKey     | [Server酱官网](https://sct.ftqq.com/) 获取 SendKey 密钥 |
 
 ### V2EX
 
